@@ -8,7 +8,7 @@ namespace foodrecipe.Controllers
         [Authorize(Roles = "User, Administrator")]
         public IActionResult Index()
         {
-            return View();
+            return kkkk View();
         }
     }
 }
