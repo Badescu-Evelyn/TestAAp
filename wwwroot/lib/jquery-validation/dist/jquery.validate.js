@@ -1068,7 +1068,11 @@ $.extend( $.validator, {
 				element = this.findByName( element.name );
 			}
 
-			// Always apply ignore filter
+			// Prevent string selectors from being passed to jQuery to avoid XSS.
+			if (typeof element === "string") {
+				// Unsafe to use as a selector; skip or return undefined.
+				return undefined;
+			}
 			return $( element ).not( this.settings.ignore )[ 0 ];
 		},
 
