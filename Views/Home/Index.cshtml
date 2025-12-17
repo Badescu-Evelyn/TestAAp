@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/home.css"> 
+    <title>Home</title>
+    <style>
+        .button-link {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #213032;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .button-link:hover {
+                background-color: #213032;
+        }
+    </style>
+</head>
+<body>
+    <div class="home-content">
+        <h1>Discover Taste Sensations</h1>
+        <a asp-controller="Recipes" asp-action="Index" class="button-link">Start cooking</a>
+    </div>
+</body>
+</html>

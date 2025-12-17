@@ -1,0 +1,82 @@
+﻿.recipe {
+    width: 100%;
+    padding: 100px 0px;
+}
+
+    .recipe h2 {
+        color: #edffef;
+        font-size: 60px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    border-radius: 4px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+}
+
+.box .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box .card .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #edffef;
+    color: #182f32;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.box .card:hover .content {
+    opacity: 1;
+}
+
+.card h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #213032;
+}
+
+.box .card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.box .card button {
+    position: relative;
+    background-color: #213032;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid black;
+    font-weight: bold;
+    transform: .4s;
+    padding: 13px 30px;
+}
+
+    .box .card button:hover {
+        background-color: #97a2a3;
+        color: #213032;
+        border: 2px solid black;
+        cursor: pointer;
+    }

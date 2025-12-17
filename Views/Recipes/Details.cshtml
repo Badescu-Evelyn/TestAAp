@@ -1,0 +1,73 @@
+﻿@model foodrecipe.DataModels.Recipe
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/details.css" />
+</head>
+<body>
+    <div class="details-container">
+        <h1>Recipe Details</h1>
+        <dl class="row">
+            <dt class="col-sm-2 recipe-label">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-sm-10 recipe-value">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-sm-2 recipe-label">
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd class="col-sm-10 recipe-value">
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+            <dt class="col-sm-2 recipe-label">
+                @Html.DisplayNameFor(model => model.PreparationTime)
+            </dt>
+            <dd class="col-sm-10 recipe-value">
+                @Html.DisplayFor(model => model.PreparationTime)
+            </dd>
+            <dt class="col-sm-2 recipe-label">
+                @Html.DisplayNameFor(model => model.CookingTime)
+            </dt>
+            <dd class="col-sm-10 recipe-value">
+                @Html.DisplayFor(model => model.CookingTime)
+            </dd>
+            <dt class="col-sm-2 recipe-label">
+                @Html.DisplayNameFor(model => model.DifficultyLevel)
+            </dt>
+            <dd class="col-sm-10 recipe-value">
+                @Html.DisplayFor(model => model.DifficultyLevel)
+            </dd>
+            <dt class="col-sm-2 recipe-label">
+                @Html.DisplayNameFor(model => model.ImageUrl)
+            </dt>
+            <dd class="col-sm-10 recipe-value">
+                <div class="category-image">
+                    <img src="@Model.ImageUrl" alt="Recipe Image" />
+                </div>
+            </dd>
+            <dt class="col-sm-2 recipe-label">
+                @Html.DisplayNameFor(model => model.Category)
+            </dt>
+            <dd class="col-sm-10 recipe-value">
+                <div class="category-name">
+                    @Html.DisplayFor(model => model.Category.Name)
+                </div>
+            </dd>
+        </dl>
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+            <a asp-action="Delete" asp-route-id="@Model?.Id">Delete</a> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </div>
+</body>
+</html>

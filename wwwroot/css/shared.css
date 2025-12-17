@@ -1,0 +1,69 @@
+﻿*{
+font-family: 'Montserrat', sans-serif;
+padding: 0;
+box-sizing: border-box;
+margin: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(45deg, #92c9b1, #92c9b1 20px, #b3e0d2 20px, #b3e0d2 40px);
+}
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    background: #006769;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #003C43;
+    margin-right: 40px;
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+    .nav-bar ul li {
+        margin-bottom: 0;
+    }
+    .nav-bar ul li a {
+        display: block;
+        color: #003C43;
+        font-size: 20px;
+        padding: 8px 25px;
+        transition: .2s;
+        margin: 0 5px;
+        text-decoration: none;
+    }
+
+    .nav-bar ul li:hover a {
+        background-color: #135D66;
+        color: #003C43;
+    }
+#logout {
+    display: block;
+    color: #003C43;
+    font-size: 20px;
+    padding: 8px 25px;
+    transition: .2s;
+    margin: 0 5px;
+    text-decoration: none;
+    background-color: transparent;
+    border: none; 
+    cursor: pointer; 
+}
+
+    #logout:hover {
+        background-color: #135D66;
+        color: #003C43; 
+    }

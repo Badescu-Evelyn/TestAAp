@@ -1,0 +1,56 @@
+
+body {
+    background: url('/uploads/Home/FOOD.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.content {
+    position: relative;
+    top: 40%;
+    left: 8%;
+    transform: translateY(-50%);
+    
+}
+
+
+h1 {
+    color: #213032;
+    font-size: 75px;
+    margin: 20px 0px 20px;
+}
+
+
+h3 {
+    color: #181515;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+h4 {
+    color: #4328bc;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+
+.button {
+    position: absolute;
+    background-color: #213032;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid black;
+    font-weight: bold;
+    padding: 13px 30px;
+    transform: .4s;
+    
+}
+
+    .button:hover {
+        background-color: #97a2a3;
+        color: #213032;
+        border: 2px solid black;
+        cursor: pointer;
+    }

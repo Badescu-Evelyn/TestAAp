@@ -1,0 +1,44 @@
+﻿@model IEnumerable<foodrecipe.DataModels.Category>
+
+@{
+    ViewData["Title"] = "Categories";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".\css\categories.css">
+    <title>Categories</title>
+</head>
+<body>
+
+    <h1>Index</h1>
+
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+
+    <!-- category section -->
+    <div id="category">
+
+        <!-- heading -->
+        <div class="category-heading">
+            <h2>All categories</h2>
+        </div>
+
+        <!-- box container -->
+        <div class="category-container">
+            @foreach (var item in Model)
+            {
+                <a href="@Url.Action("Details", "Categories", new { id = item.Id })" class="category-box">
+                    <img src="@item.ImageUrl" alt="@item.Name">
+                    <span>@item.Name</span>
+                </a>
+            }
+        </div>
+    </div>
+
+</body>
+</html>

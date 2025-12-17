@@ -1,0 +1,74 @@
+﻿/* details.css */
+
+.details-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+    .details-container h1 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .details-container h4 {
+        color: #555;
+    }
+
+    .details-container .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .details-container .col-sm-2 {
+        flex: 0 0 16.6667%;
+        max-width: 16.6667%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .details-container .col-sm-10 {
+        flex: 0 0 83.3333%;
+        max-width: 83.3333%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .details-container dl {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center horizontally */
+    }
+
+    .details-container dt,
+    .details-container dd {
+        margin-bottom: 10px;
+        margin-right: 20px;
+    }
+
+    .details-container img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out; /* Add transition */
+    }
+
+        /* Increase size on hover */
+        .details-container img:hover {
+            transform: scale(1.1);
+        }
+
+    /* Style for name */
+    .details-container .category-name {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    /* Style for image URL */
+    .details-container .category-image {
+        margin-bottom: 10px;
+        text-align: center; /* Center image */
+    }

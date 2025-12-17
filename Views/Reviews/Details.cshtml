@@ -1,0 +1,59 @@
+﻿@model foodrecipe.DataModels.Review
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/details.css" />
+</head>
+<body>
+    <h1>Review Details</h1>
+
+    <div>
+        <h4>Review</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2 review-label">
+                @Html.DisplayNameFor(model => model.Rating)
+            </dt>
+            <dd class="col-sm-10 review-value">
+                @Html.DisplayFor(model => model.Rating)
+            </dd>
+            <dt class="col-sm-2 review-label">
+                @Html.DisplayNameFor(model => model.Comment)
+            </dt>
+            <dd class="col-sm-10 review-value">
+                @Html.DisplayFor(model => model.Comment)
+            </dd>
+            <dt class="col-sm-2 review-label">
+                @Html.DisplayNameFor(model => model.Date)
+            </dt>
+            <dd class="col-sm-10 review-value">
+                @Html.DisplayFor(model => model.Date)
+            </dd>
+            <dt class="col-sm-2 review-label">
+                @Html.DisplayNameFor(model => model.Recipe)
+            </dt>
+            <dd class="col-sm-10 review-value">
+                @Html.DisplayFor(model => model.Recipe.Name)
+            </dd>
+            <dt class="col-sm-2 review-label">
+                @Html.DisplayNameFor(model => model.User)
+            </dt>
+            <dd class="col-sm-10 review-value">
+                @Html.DisplayFor(model => model.User.UserName)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+</body>
+</html>

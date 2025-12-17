@@ -1,0 +1,83 @@
+﻿/* Import shared styles */
+@import url('shared.css');
+
+/* Recipe specific styles */
+.recipe-container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-header {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+    .recipe-header h1 {
+        font-size: 2.5em;
+        margin: 0;
+        color: #333;
+    }
+
+.image-container {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.recipe-header img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.recipe-details {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.details-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+    .details-grid div {
+        width: 45%;
+        margin-bottom: 10px;
+    }
+
+.recipe-ingredients, .recipe-instructions, .recipe-reviews {
+    margin: 20px 0;
+}
+
+    .recipe-ingredients h2, .recipe-instructions h2, .recipe-reviews h2 {
+        font-size: 1.5em;
+        color: #333;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    .recipe-ingredients ul, .recipe-instructions ol {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+
+        .recipe-ingredients ul li, .recipe-instructions ol li {
+            margin: 5px 0;
+        }
+
+    .recipe-reviews #reviews-list p {
+        background-color: #f9f9f9;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 5px 0;
+    }
+
+        .recipe-reviews #reviews-list p strong {
+            color: #333;
+        }

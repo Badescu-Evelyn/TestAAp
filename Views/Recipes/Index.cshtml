@@ -1,0 +1,57 @@
+﻿@model IEnumerable<foodrecipe.DataModels.Recipe>
+
+@{
+    ViewData["Title"] = "Recipes";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".\css\recipes.css">
+    <title>Recipes</title>
+</head>
+<body>
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <div class="recipe">
+        <h2>Featured Recipes</h2>
+        <div class="box">
+            @foreach (var item in Model.Take(8))
+            {
+                <div class="card">
+                    <a href="@Url.Action("Details", "Recipes", new { id = item.Id })">
+                        <img src="@item.ImageUrl" alt="">
+                    </a>
+                    <div class="content">
+                        <h3>@item.Name</h3>
+                        <p>@item.Description</p>
+                        <button>View Recipe</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+                @* @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Description</td>
+                        <td>@item.PreparationTime</td>
+                        <td>@item.CookingTime</td>
+                        <td>@item.DifficultyLevel</td>
+                        @* <td>@item.Category.Name</td>  
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
+                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                } *@
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

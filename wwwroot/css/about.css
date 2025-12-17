@@ -1,0 +1,37 @@
+﻿.about {
+    padding-top: 50px; /* Add space between the title and the top of the page */
+}
+
+    .about .main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Add space between the image and text */
+        margin: 0 40px; /* Add space between the image and text left and right of the page */
+    }
+
+    .about img {
+        height: auto;
+        width: 410px;
+        border-radius: 15px;
+        margin-right: 50px; /* Add some margin between the image and text */
+    }
+
+.about-text {
+    flex: 1; /* Take up remaining space */
+}
+
+.about h2 {
+    color: #edffef;
+    font-size: 60px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.about-text p {
+    color: black; /* Changed text color to black */
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
